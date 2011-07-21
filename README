@@ -1,0 +1,38 @@
+This is a basic setup for the baby game:
+
+1) unpack tarball for a directory called babygame, put this in your 
+   site somewhere, for example http://<your-site>/babygame.
+
+2) You need to create a Mysql database called 'babygame'.
+
+3) The baby.sql file contains the needed SQL statements 
+   to create the babygame 'database' and 'guesses' table.
+
+3) Edit the const.inc.php file, adjusting the DB_* variables
+   to point to your db server, with your db user and password:
+
+		// Database settings.
+		//
+		define( "DB_SERVER",    "localhost: );
+		define( "DB_USER",      "babygame" );	
+		define( "DB_PASSWORD",  "your-password" );	
+		define( "DB_DATABASE",  "babygame" );	
+
+4) Edit the const.inc.php file, adjusting the ADMIN_GAME variable
+   to point to a valid email that is to receive warning emails each
+   time a vote is made on the site:
+
+		// admin processors of tech reports:
+		define( "ADMIN_GAME", "your@email.com" );
+
+   Set the other settings for your game (examples included here):
+
+                // some general info.
+                define( "FAMILYNAME", "PAPILLAULT" );
+                define( "DUEDATE", "October 14th, 2007" );
+                define( "ENDSUBMITS", "2007-11-14" );
+
+
+5) Point a link on your baby site to the file babygame.php and enjoy:
+
+   http://<your-site>/babygame/babygame.php
